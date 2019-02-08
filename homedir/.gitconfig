@@ -1,6 +1,6 @@
 [user]
-  name = Milos Peric
-  email = mcmausknile@hotmail.com
+	name = Milos Peric
+	email = mcmausknile@hotmail.com
 [github]
   # https://github.com/blog/180-local-github-config
   user = knilecrack
@@ -197,6 +197,7 @@
   smudge = git media smudge %f
 
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process

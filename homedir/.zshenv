@@ -1,8 +1,10 @@
 fpath=($fpath $HOME/.zsh/func)
 typeset -U fpath
-
+#custom made
+alias cls="clear"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
+alias gop="cd ~/code"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

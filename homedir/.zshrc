@@ -33,7 +33,7 @@ export DISABLE_AUTO_TITLE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(colorize compleat dirpersist autojump git gulp history cp)
+plugins=(colorize compleat dirpersist autojump git gulp history cp zsh-nvm nvm docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +42,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #source /usr/local/opt/nvm/nvm.sh
 
 autoload -U add-zsh-hook
+
 load-nvmrc() {
   if [[ -f .nvmrc && -r .nvmrc ]]; then
     nvm use &> /dev/null
@@ -57,3 +58,12 @@ unsetopt correct
 
 # run fortune on new terminal :)
 # fortune
+export PATH=/Library/PostgreSQL/11/bin:$PATH
+export PGDATA=/Users/knilecrack/docker/volumes/postgres/data
+export PGLOCALEDIR=/Library/PostgreSQL/11/share/locale
+export MANPATH=$MANPATH:/Library/PostgreSQL/11/share/man
+export PATH=/usr/local/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+#. "$(brew --prefix nvm)/nvm.sh"
+source /usr/local/Cellar/nvm/0.34.0/nvm.sh
+export JAVA_HOME=`/usr/libexec/java_home`
